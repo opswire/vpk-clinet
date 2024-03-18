@@ -388,3 +388,8 @@ input {
         object-fit: cover;
     }
 }
+
+.section {
+    border: 1px solid black;
+    padding: 10px;
+}
