@@ -22,6 +22,11 @@ body {
     padding: 15px;
     border-radius: 5px;
     background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    flex-shrink: 0;
+    align-content: space-between;
 }
 
 .pizza img {
@@ -85,7 +90,29 @@ button {
     font-family: inherit;
 }
 
+.big-button-containers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width    : 815px) {
+    .big-button-containers {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    button.big-button {
+        width: 100%;
+    }
+}
+
 button.big-button {
+    margin-bottom: 2em; /* Добавляем отступ между кнопками */
     padding: 1em 2em;
     border: 2px solid var(--colorShadeA);
     border-radius: 1em;
@@ -391,5 +418,32 @@ input {
 
 .section {
     border: 1px solid black;
-    padding: 10px;
+}
+
+section {
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+}
+
+.youtube-box {
+    position: relative;
+    width: 95%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.youtube-box iframe,
+.youtube-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
 }
